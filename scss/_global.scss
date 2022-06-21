@@ -1,0 +1,32 @@
+body {
+    font-family: "Basically A Sans Serif", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #d9dad9;
+    background-color: #08171a;
+    cursor: default;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 17px;
+    max-width: 1514px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    width: fit-content;
+    height: 54px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #000;
+    background: #ff3;
+
+    img {
+        margin-left: 15px;
+    }
+}

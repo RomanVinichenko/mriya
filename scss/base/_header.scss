@@ -1,0 +1,56 @@
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #061012;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+
+    &__list {
+        display: flex;
+        margin: 0 auto 0 22%;
+
+        li {
+            + li {
+                margin-left: 43px;
+            }
+        }
+
+        a {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    &__social {
+        display: flex;
+
+        li {
+            + li {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    &__copy {
+        display: flex;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+
+        li:first-child {
+            margin-right: 90px;
+        }
+
+        li:last-child {
+            margin-left: 25px;
+        }
+    }
+}

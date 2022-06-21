@@ -25,8 +25,22 @@ body {
     font-weight: 600;
     color: #000;
     background: #ff3;
+    transition: all 0.2s;
 
     img {
         margin-left: 15px;
+    }
+
+    &:focus,
+    &:active {
+        background-color: #ff0;
+    }
+
+    &:hover {
+        background-color: #ffff5e;
+    }
+
+    &:disabled {
+        background-color: #4b4b4b;
     }
 }

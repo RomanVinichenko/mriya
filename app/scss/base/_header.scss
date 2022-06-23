@@ -1,72 +1,172 @@
 .header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 20;
-    background-color: #061012;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  background-color: #061012;
+
+  .menu__social {
+    @include m($xl) {
+      display: none;
+    }
+  }
 }
 
 .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+
+  &__burger {
+    position: relative;
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 26px;
+      height: 3px;
+      border-radius: 20px;
+      background-color: #d9dad9;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      bottom: 8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: block;
+      width: 26px;
+      height: 3px;
+      border-radius: 20px;
+      background-color: #d9dad9;
+      transform: translate(-50%, -50%);
+    }
+
+    @include m($xl) {
+      display: block;
+    }
+  }
+
+  &__list {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
+    margin: 0 auto 0 22%;
 
-    &__list {
-        display: flex;
-        margin: 0 auto 0 22%;
-
-        li {
-            + li {
-                margin-left: 43px;
-            }
-        }
-
-        a {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 24px;
-            transition: color 0.2s;
-
-            &:hover {
-                color: #ff3;
-            }
-        }
+    li {
+      + li {
+        margin-left: 43px;
+      }
     }
 
-    &__social {
-        display: flex;
+    a {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      transition: color 0.2s;
 
-        a {
-            transition: fill 0.2s;
-
-            &:hover {
-                path {
-                    fill: #ff3;
-                }
-            }
-        }
-
-        li {
-            + li {
-                margin-left: 25px;
-            }
-        }
+      &:hover {
+        color: #ff3;
+      }
     }
 
-    &__copy {
-        display: flex;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 24px;
-
-        li:first-child {
-            margin-right: 90px;
-        }
-
-        li:last-child {
-            margin-left: 25px;
-        }
+    @include m($xl) {
+      display: none;
     }
+  }
+
+  &__social {
+    display: flex;
+    height: 24px;
+
+    a {
+      transition: fill 0.2s;
+
+      &:hover {
+        path {
+          fill: #ff3;
+        }
+      }
+    }
+
+    li {
+      + li {
+        margin-left: 25px;
+      }
+    }
+  }
+
+  &__copy {
+    display: flex;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+
+    li:first-child {
+      margin-right: 90px;
+
+      @include m($lg) {
+        margin-right: 40px;
+      }
+
+      @include m($md) {
+        margin-right: 0;
+        min-width: 100%;
+      }
+    }
+
+    li:last-child {
+      margin-left: 25px;
+    }
+
+    a {
+      transition: color 0.2s;
+
+      &:hover {
+        color: #ff3;
+      }
+    }
+
+    @include m($xl) {
+      margin: 0;
+    }
+
+    @include m($lg) {
+      font-size: 14px;
+    }
+
+    @include m($sm) {
+      font-size: 12px;
+    }
+
+    @include m($md) {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  @include m($xl) {
+    height: 55px;
+  }
 }

@@ -21,10 +21,13 @@
   }
 
   &__video {
+    //min-width: 700px;
     display: flex;
+    //justify-content: center;
     align-items: center;
 
     video {
+      overflow: hidden;
       max-width: 215px;
       object-fit: cover;
     }
@@ -36,6 +39,7 @@
   }
 
   &__video-wrap {
+    overflow: hidden;
     position: relative;
 
     &::after {
@@ -62,9 +66,6 @@
     }
 
     &:first-child {
-      width: 214px;
-      height: 490px;
-
       &::after {
         background-image: url("../images/cover1.png");
         background-size: 214px 490px;
@@ -101,27 +102,9 @@
           height: 230px;
         }
       }
-
-      @include m(1600) {
-        width: 160px;
-        height: 350px;
-      }
-
-      @include m($lg) {
-        width: 130px;
-        height: 280px;
-      }
-
-      @include m($sm) {
-        width: 100px;
-        height: 230px;
-      }
     }
 
     &:last-child {
-      width: 214px;
-      height: 490px;
-
       &::after {
         background-image: url("../images/cover3.png");
         background-size: 214px 490px;
@@ -158,26 +141,9 @@
           height: 230px;
         }
       }
-
-      @include m(1600) {
-        width: 160px;
-        height: 350px;
-      }
-
-      @include m($lg) {
-        width: 130px;
-        height: 280px;
-      }
-
-      @include m($sm) {
-        width: 100px;
-        height: 230px;
-      }
     }
 
     &:nth-child(2) {
-      width: 202px;
-      height: 401px;
 
       &::after {
         background-image: url("../images/cover2.png");
@@ -214,21 +180,6 @@
           width: 90px;
           height: 220px;
         }
-      }
-
-      @include m(1600) {
-        width: 150px;
-        height: 300px;
-      }
-
-      @include m($lg) {
-        width: 120px;
-        height: 240px;
-      }
-
-      @include m($sm) {
-        width: 90px;
-        height: 220px;
       }
     }
   }
@@ -276,11 +227,11 @@
     line-height: 1.2;
     color: #fff;
 
-    @include m($xl) {
+    @include m(1600) {
       font-size: 48px;
     }
 
-    @include m($lg) {
+    @include m($xl) {
       font-size: 32px;
     }
   }

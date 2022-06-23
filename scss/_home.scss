@@ -22,12 +22,28 @@
 
   &__video {
     display: flex;
-    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+
+    //align-items: center;
+    height: 490px;
 
     video {
-      max-width: 215px;
       overflow: hidden;
       object-fit: cover;
+    }
+
+    @include m(1600) {
+      height: 350px;
+    }
+
+    @include m($lg) {
+      height: 280px;
+    }
+
+    @include m($sm) {
+      height: 230px;
     }
 
     @include m($md) {
@@ -47,6 +63,7 @@
       top: 0;
       width: 100%;
       height: 100%;
+      overflow: hidden;
       background-size: 214px 490px;
       background-repeat: no-repeat;
     }
@@ -64,9 +81,12 @@
     }
 
     &:first-child {
+      width: 215px;
+      height: 490px;
+
       &::after {
         background-image: url("../images/cover1.png");
-        background-size: 214px 490px;
+        background-size: 215px 490px;
 
         @include m(1600) {
           background-size: 160px 350px;
@@ -82,7 +102,7 @@
       }
 
       video {
-        width: 214px;
+        width: 215px;
         height: 490px;
 
         @include m(1600) {
@@ -99,13 +119,31 @@
           width: 100px;
           height: 230px;
         }
+      }
+
+      @include m(1600) {
+        width: 160px;
+        height: 350px;
+      }
+
+      @include m($lg) {
+        width: 130px;
+        height: 280px;
+      }
+
+      @include m($sm) {
+        width: 100px;
+        height: 230px;
       }
     }
 
     &:last-child {
+      width: 215px;
+      height: 490px;
+
       &::after {
         background-image: url("../images/cover3.png");
-        background-size: 214px 490px;
+        background-size: 215px 490px;
 
         @include m(1600) {
           background-size: 160px 350px;
@@ -121,7 +159,7 @@
       }
 
       video {
-        width: 214px;
+        width: 215px;
         height: 490px;
 
         @include m(1600) {
@@ -139,12 +177,31 @@
           height: 230px;
         }
       }
+
+      @include m(1600) {
+        width: 160px;
+        height: 350px;
+      }
+
+      @include m($lg) {
+        width: 130px;
+        height: 280px;
+      }
+
+      @include m($sm) {
+        width: 100px;
+        height: 230px;
+      }
     }
 
     &:nth-child(2) {
+      margin-top: 37px;
+      width: 202px;
+      height: 402px;
+
       &::after {
         background-image: url("../images/cover2.png");
-        background-size: 202px 401px;
+        background-size: 202px 402px;
 
         @include m(1600) {
           background-size: 150px 300px;
@@ -155,13 +212,13 @@
         }
 
         @include m($sm) {
-          background-size: 90px 220px;
+          background-size: 90px 210px;
         }
       }
 
       video {
         width: 202px;
-        height: 401px;
+        height: 402px;
 
         @include m(1600) {
           width: 150px;
@@ -175,9 +232,39 @@
 
         @include m($sm) {
           width: 90px;
-          height: 220px;
+          height: 210px;
         }
       }
+
+      @include m(1600) {
+        margin-top: 17px;
+        width: 150px;
+        height: 300px;
+      }
+
+      @include m($lg) {
+        margin-top: 13px;
+        width: 120px;
+        height: 240px;
+      }
+
+      @include m($sm) {
+        margin-top: 0;
+        width: 90px;
+        height: 210px;
+      }
+    }
+
+    @include m(1600) {
+      height: 350px;
+    }
+
+    @include m($lg) {
+      height: 280px;
+    }
+
+    @include m($sm) {
+      height: 230px;
     }
   }
 

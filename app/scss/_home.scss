@@ -21,14 +21,12 @@
   }
 
   &__video {
-    //min-width: 700px;
     display: flex;
-    //justify-content: center;
     align-items: center;
 
     video {
-      overflow: hidden;
       max-width: 215px;
+      overflow: hidden;
       object-fit: cover;
     }
 
@@ -39,8 +37,8 @@
   }
 
   &__video-wrap {
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 
     &::after {
       content: "";
@@ -144,7 +142,6 @@
     }
 
     &:nth-child(2) {
-
       &::after {
         background-image: url("../images/cover2.png");
         background-size: 202px 401px;

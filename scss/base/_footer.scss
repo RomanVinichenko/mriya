@@ -1,3 +1,65 @@
 .footer {
-    background-color: #061012;
+  background-color: #061012;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+
+    @include m($md) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+
+    &__social {
+      height: 20px;
+
+      a {
+        width: 24px;
+        height: 24px;
+
+        @include m($md) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      svg {
+        @include m($md) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      @include m($md) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include m($xl) {
+      flex-direction: column;
+      padding: 15px 0;
+      height: fit-content;
+
+      .footer__logo {
+        margin-bottom: 23px;
+      }
+    }
+
+    @include m($md) {
+      .footer__logo {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include m($md) {
+      padding: 15px 0 10px;
+    }
+  }
 }

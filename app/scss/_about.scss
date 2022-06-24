@@ -20,6 +20,7 @@
 
   &__inner {
     padding-left: 378px;
+    margin-bottom: 200px;
   }
 
   ul {
@@ -28,20 +29,42 @@
     li {
       width: 100%;
       max-width: 346px;
+      margin-bottom: 50px;
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
     }
 
     h4 {
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 1.2;
       margin-bottom: 10px;
       padding-bottom: 10px;
       border-bottom: 1px solid #d9dad9;
-      font-size: 36px;
       color: #ff3;
     }
 
     h5 {
       font-weight: 400;
       font-size: 20px;
-      line-height: 1.2px;
+      line-height: 1.2;
+    }
+  }
+  a {
+    font-weight: 600;
+    text-decoration: underline;
+    padding-right: 39px;
+    width: fit-content;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: url("../images/arrow-diagonal.svg");
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 24px;
+      height: 24px;
     }
   }
 }

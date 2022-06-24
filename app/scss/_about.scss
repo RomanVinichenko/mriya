@@ -19,29 +19,30 @@
   }
 
   &__inner {
-    padding-left: 378px;
     margin-bottom: 200px;
+    padding-left: 378px;
   }
 
   ul {
     display: flex;
 
     li {
+      margin-bottom: 50px;
       width: 100%;
       max-width: 346px;
-      margin-bottom: 50px;
+
       &:not(:last-child) {
         margin-right: 32px;
       }
     }
 
     h4 {
-      font-weight: 400;
-      font-size: 36px;
-      line-height: 1.2;
       margin-bottom: 10px;
       padding-bottom: 10px;
       border-bottom: 1px solid #d9dad9;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 1.2;
       color: #ff3;
     }
 
@@ -51,20 +52,22 @@
       line-height: 1.2;
     }
   }
+
   a {
-    font-weight: 600;
-    text-decoration: underline;
+    position: relative;
     padding-right: 39px;
     width: fit-content;
-    position: relative;
+    font-weight: 600;
+    text-decoration: underline;
+
     &::after {
-      position: absolute;
       content: url("../images/arrow-diagonal.svg");
-      top: 50%;
-      transform: translateY(-50%);
+      position: absolute;
       right: 0;
+      top: 50%;
       width: 24px;
       height: 24px;
+      transform: translateY(-50%);
     }
   }
 }

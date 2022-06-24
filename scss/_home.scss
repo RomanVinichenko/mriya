@@ -11,6 +11,11 @@
       max-height: 80vh;
     }
 
+    @include m($lg) {
+      min-height: 70vh;
+      max-height: 70vh;
+    }
+
     @include m($md) {
       flex-direction: column-reverse;
       align-items: flex-start;
@@ -22,25 +27,8 @@
 
   &__video {
     display: flex;
-    align-self: center;
     justify-content: center;
-
-    video {
-      //overflow: hidden;
-      //object-fit: cover;
-    }
-
-    //@include m(1600) {
-    //  height: 350px;
-    //}
-    //
-    //@include m($lg) {
-    //  height: 280px;
-    //}
-    //
-    //@include m($sm) {
-    //  height: 230px;
-    //}
+    width: 100%;
 
     @include m($md) {
       align-self: center;
@@ -49,222 +37,71 @@
   }
 
   &__video-wrap {
-    position: relative;
-
-    //&::after {
-    //  content: "";
-    //  position: absolute;
-    //  left: 0;
-    //  top: 0;
-    //  width: 100%;
-    //  height: 100%;
-    //  overflow: hidden;
-    //  background-position: center;
-    //  background-repeat: no-repeat;
-    //}
-
     &:not(:last-child) {
-      margin-right: 23px;
+      margin-right: 35px;
+
+      @include m(1600) {
+        margin-right: 24px;
+      }
+
+      @include m($xl) {
+        margin-right: 17px;
+      }
+    }
+
+    video {
+      @include m(1600) {
+        max-width: 200px;
+      }
+
+      @include m(1370) {
+        max-width: 170px;
+      }
+
+      @include m($xl) {
+        max-width: 140px;
+      }
 
       @include m($lg) {
-        margin-right: 17px;
+        max-width: 110px;
+      }
+
+      @include m($md) {
+        max-width: 130px;
       }
 
       @include m($sm) {
-        margin-right: 10px;
+        max-width: 82px;
       }
     }
 
-    //&:first-child {
-    //  width: 215px;
-    //  height: 490px;
-    //
-    //  &::after {
-    //    background-image: url("../images/cover1.png");
-    //    background-size: 215px 490px;
-    //
-    //    @include m(1600) {
-    //      background-size: 160px 350px;
-    //    }
-    //
-    //    @include m($lg) {
-    //      background-size: 130px 280px;
-    //    }
-    //
-    //    @include m($sm) {
-    //      background-size: 100px 230px;
-    //    }
-    //  }
-    //
-    //  video {
-    //    width: 215px;
-    //    height: 490px;
-    //
-    //    @include m(1600) {
-    //      width: 160px;
-    //      height: 350px;
-    //    }
-    //
-    //    @include m($lg) {
-    //      width: 130px;
-    //      height: 280px;
-    //    }
-    //
-    //    @include m($sm) {
-    //      width: 100px;
-    //      height: 230px;
-    //    }
-    //  }
-    //
-    //  @include m(1600) {
-    //    width: 160px;
-    //    height: 350px;
-    //  }
-    //
-    //  @include m($lg) {
-    //    width: 130px;
-    //    height: 280px;
-    //  }
-    //
-    //  @include m($sm) {
-    //    width: 100px;
-    //    height: 230px;
-    //  }
-    //}
-    //
-    //&:last-child {
-    //  width: 215px;
-    //  height: 490px;
-    //
-    //  &::after {
-    //    background-image: url("../images/cover3.png");
-    //    background-size: 215px 490px;
-    //
-    //    @include m(1600) {
-    //      background-size: 160px 350px;
-    //    }
-    //
-    //    @include m($lg) {
-    //      background-size: 130px 280px;
-    //    }
-    //
-    //    @include m($sm) {
-    //      background-size: 100px 230px;
-    //    }
-    //  }
-    //
-    //  video {
-    //    width: 215px;
-    //    height: 490px;
-    //
-    //    @include m(1600) {
-    //      width: 160px;
-    //      height: 350px;
-    //    }
-    //
-    //    @include m($lg) {
-    //      width: 130px;
-    //      height: 280px;
-    //    }
-    //
-    //    @include m($sm) {
-    //      width: 100px;
-    //      height: 230px;
-    //    }
-    //  }
-    //
-    //  @include m(1600) {
-    //    width: 160px;
-    //    height: 350px;
-    //  }
-    //
-    //  @include m($lg) {
-    //    width: 130px;
-    //    height: 280px;
-    //  }
-    //
-    //  @include m($sm) {
-    //    width: 100px;
-    //    height: 230px;
-    //  }
-    //}
-    //
     &:nth-child(2) {
-      margin-top: 37px;
+      margin-top: 39px;
+
+      @include m(1600) {
+        margin-top: 17px;
+      }
+
+      @include m(1370) {
+        margin-top: 14px;
+      }
+
+      @include m($xl) {
+        margin-top: 12px;
+      }
+
+      @include m($lg) {
+        margin-top: 10px;
+      }
+
+      @include m($md) {
+        margin-top: 12px;
+      }
+
+      @include m($sm) {
+        margin-top: 9px;
+      }
     }
-
-    //&:nth-child(2) {
-    //  margin-top: 37px;
-    //  width: 202px;
-    //  height: 402px;
-    //
-    //  &::after {
-    //    background-image: url("../images/cover2.png");
-    //    background-size: 202px 402px;
-    //
-    //    @include m(1600) {
-    //      background-size: 150px 300px;
-    //    }
-    //
-    //    @include m($lg) {
-    //      background-size: 120px 240px;
-    //    }
-    //
-    //    @include m($sm) {
-    //      background-size: 90px 210px;
-    //    }
-    //  }
-    //
-    //  video {
-    //    width: 202px;
-    //    height: 402px;
-    //
-    //    @include m(1600) {
-    //      width: 150px;
-    //      height: 300px;
-    //    }
-    //
-    //    @include m($lg) {
-    //      width: 120px;
-    //      height: 240px;
-    //    }
-    //
-    //    @include m($sm) {
-    //      width: 90px;
-    //      height: 210px;
-    //    }
-    //  }
-    //
-    //  @include m(1600) {
-    //    margin-top: 17px;
-    //    width: 150px;
-    //    height: 300px;
-    //  }
-    //
-    //  @include m($lg) {
-    //    margin-top: 13px;
-    //    width: 120px;
-    //    height: 240px;
-    //  }
-    //
-    //  @include m($sm) {
-    //    margin-top: 0;
-    //    width: 90px;
-    //    height: 210px;
-    //  }
-    //}
-
-    //@include m(1600) {
-    //  height: 350px;
-    //}
-    //
-    //@include m($lg) {
-    //  height: 280px;
-    //}
-    //
-    //@include m($sm) {
-    //  height: 230px;
-    //}
   }
 
   &__info {
@@ -314,6 +151,10 @@
       font-size: 48px;
     }
 
+    @include m(1370) {
+      font-size: 40px;
+    }
+
     @include m($xl) {
       font-size: 32px;
     }
@@ -341,6 +182,10 @@
         text-decoration: underline;
       }
 
+      @include m(1600) {
+        font-size: 16px;
+      }
+
       @include m($xl) {
         font-size: 14px;
       }
@@ -354,11 +199,7 @@
       height: 24px;
       transition: margin-left 0.2s;
 
-      @include m($xl) {
-        margin-top: -3px;
-      }
-
-      @include m($lg) {
+      @include m(1370) {
         display: none;
       }
     }

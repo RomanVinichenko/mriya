@@ -19,6 +19,10 @@
   justify-content: space-between;
   height: 80px;
 
+  .logo {
+    z-index: 20;
+  }
+
   &__burger {
     position: relative;
     display: none;
@@ -68,12 +72,51 @@
   }
 
   &__list {
+    position: relative;
     display: flex;
     margin: 0 auto 0 22%;
 
     li {
       + li {
         margin-left: 43px;
+
+        @include m($xl) {
+          margin-left: 0;
+        }
+      }
+
+      &:not(:last-child) {
+        @include m($xl) {
+          margin-bottom: 50px;
+        }
+
+        @include h(700) {
+          margin-bottom: 40px;
+        }
+
+        @include h(500) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &:last-child {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        margin: 0 auto;
+        padding: 25px 0 50px;
+        width: 91%;
+        max-width: 100%;
+        border-top: 1px solid #d9dad9;
+        font-size: 16px;
+        text-align: center;
+        color: #ff3;
+
+        @include m($xl) {
+          display: block;
+        }
       }
     }
 
@@ -86,11 +129,39 @@
       &:hover {
         color: #ff3;
       }
+
+      @include m($xl) {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 24px;
+        text-transform: uppercase;
+      }
+
+      @include h(500) {
+        font-size: 28px;
+      }
     }
 
     @include m($xl) {
-      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 55px;
+      bottom: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding-bottom: 55px;
+      height: calc(100vh - 55px);
+      background-color: #08171a;
+      transform: translateX(-200%);
+      transition: all 0.4s;
     }
+  }
+
+  &__list--active {
+    transform: none;
   }
 
   &__social {

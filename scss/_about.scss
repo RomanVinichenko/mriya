@@ -19,6 +19,7 @@
   }
 
   &__inner {
+    margin-bottom: 200px;
     padding-left: 378px;
   }
 
@@ -26,22 +27,47 @@
     display: flex;
 
     li {
+      margin-bottom: 50px;
       width: 100%;
       max-width: 346px;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
     }
 
     h4 {
       margin-bottom: 10px;
       padding-bottom: 10px;
       border-bottom: 1px solid #d9dad9;
+      font-weight: 400;
       font-size: 36px;
+      line-height: 1.2;
       color: #ff3;
     }
 
     h5 {
       font-weight: 400;
       font-size: 20px;
-      line-height: 1.2px;
+      line-height: 1.2;
+    }
+  }
+
+  a {
+    position: relative;
+    padding-right: 39px;
+    width: fit-content;
+    font-weight: 600;
+    text-decoration: underline;
+
+    &::after {
+      content: url("../images/arrow-diagonal.svg");
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      transform: translateY(-50%);
     }
   }
 }

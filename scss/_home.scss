@@ -135,15 +135,15 @@
       }
 
       &:first-child {
-        animation: fade 0.85s;
+        animation: fade 0.85s, cycle-1 20s linear infinite;
       }
 
       &:last-child {
-        animation: fade 0.95s;
+        animation: fade 0.95s, cycle-3 20s linear infinite;
       }
 
       &:nth-child(2) {
-        animation: fade 0.9s;
+        animation: fade 0.9s, cycle-2 20s linear infinite;
       }
 
       @include m($xl) {
@@ -703,5 +703,63 @@
 
   @include m($lg) {
     margin-bottom: 50px;
+  }
+}
+
+@keyframes cycle-1 {
+  0% { color: #ff6200; }
+  20% { color: #ffdf00; }
+  40% { color: #d30808; }
+  60% { color: #7c00ff; }
+  80% { color: #00ffd0; }
+  100% { color: #ff6200; }
+}
+
+@keyframes cycle-2 {
+  0% {
+    color: #3c65ff;
+  }
+
+  20% {
+    color: #00dbff;
+  }
+
+  40% {
+    color: #48ff3b;
+  }
+
+  60% {
+    color: #2673ff;
+  }
+
+  80% {
+    color: #ab1fff;
+  }
+  100% { color: #3c65ff; }
+}
+
+@keyframes cycle-3 {
+  0% {
+    color: #31ff00;
+  }
+
+  20% {
+    color: #07c40a;
+  }
+
+  40% {
+    color: #e7ef00;
+  }
+
+  60% {
+    color: #0079ff;
+  }
+
+  80% {
+    color: #79ff00;
+  }
+
+  100% {
+    color: #31ff00;
   }
 }

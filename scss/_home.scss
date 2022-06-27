@@ -458,6 +458,10 @@
     }
 
     p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
       @include m($lg) {
         font-size: 18px;
       }

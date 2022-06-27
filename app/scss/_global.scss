@@ -12,7 +12,7 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 40px;
-  max-width: 1514px;
+  max-width: 1560px;
 
   @include m($lg) {
     padding: 0 17px;
@@ -74,18 +74,32 @@ body {
 
   .popup__wrapper {
     position: relative;
+    margin: 0 17px;
     padding: 80px 45px;
     width: 100%;
     max-width: 788px;
     border-radius: 30px;
     text-align: center;
     background: #d9dad9;
+
+    @include m($md) {
+      padding: 50px 19px;
+    }
   }
 
   p {
     margin-bottom: 15px;
     font-weight: 500;
     font-size: 24px;
+
+    @include m($xl) {
+      font-size: 20px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
   }
 
   h2 {
@@ -95,23 +109,45 @@ body {
     font-size: 40px;
     line-height: 1.2;
     text-transform: uppercase;
+
+    @include m($xl) {
+      margin-bottom: 35px;
+      font-size: 32px;
+    }
   }
 
   &__buttons {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include m($md) {
+      flex-direction: column;
+    }
+  }
+
+  .button__light,
+  .button__dark {
+    width: 200px;
+
+    @include m($lg) {
+      width: 175px;
+      height: 45px;
+      font-size: 16px;
+    }
   }
 
   .button__dark {
     margin-right: 50px;
-    width: 200px;
     color: #fff;
     background-color: #08171a;
+
+    @include m($md) {
+      margin: 0 0 25px;
+    }
   }
 
   .button__light {
-    width: 200px;
     border: 1px solid #08171a;
     color: #08171a;
     background-color: #d9dad9;
@@ -147,10 +183,31 @@ body {
     &::after {
       transform: rotate(-45deg);
     }
+
+    @include m($md) {
+      right: 20px;
+      top: 20px;
+    }
   }
 
   &--active {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

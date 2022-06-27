@@ -16,6 +16,7 @@
   .menu {
     display: flex;
     justify-content: space-between;
+    animation: fade 0.9s;
 
     &__social {
       height: 20px;

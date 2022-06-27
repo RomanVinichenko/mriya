@@ -377,9 +377,6 @@
 
     li {
       position: relative;
-      width: fit-content;
-      height: 100%;
-      overflow: hidden;
 
       p {
         position: absolute;
@@ -422,10 +419,22 @@
         }
       }
 
+      &:first-child {
+        animation: fade 0.8s;
+      }
+
+      &:last-child {
+        animation: fade 0.9s;
+      }
+
       &:nth-child(-n+2) {
         @include m($lg) {
           margin-right: 18px;
         }
+      }
+
+      &:nth-child(2) {
+        animation: fade 0.85s;
       }
 
       @include m($xl) {
@@ -506,6 +515,18 @@
         @include m($lg) {
           margin-bottom: 50px;
         }
+      }
+
+      &:first-child {
+        animation: fade 0.8s;
+      }
+
+      &:last-child {
+        animation: fade 0.9s;
+      }
+
+      &:nth-child(2) {
+        animation: fade 0.85s;
       }
 
       @include m($xl) {
@@ -616,6 +637,14 @@
         }
       }
 
+      &:first-child {
+        animation: fade 0.8s;
+      }
+
+      &:last-child {
+        animation: fade 0.9s;
+      }
+
       &:nth-child(3) {
         a {
           display: inline-block;
@@ -624,6 +653,10 @@
             margin-left: 25px;
           }
         }
+      }
+
+      &:nth-child(2) {
+        animation: fade 0.85s;
       }
     }
 
@@ -638,6 +671,8 @@
   }
 
   &__map {
+    animation: fade 1s;
+
     img {
       width: 100%;
       object-fit: cover;

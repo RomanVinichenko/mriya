@@ -8,6 +8,7 @@
     font-size: 64px;
     line-height: 120%;
     color: #fff;
+    animation: fade 1s;
 
     span {
       color: #ff3;
@@ -29,6 +30,7 @@
 
   p {
     margin-bottom: 100px;
+    animation: fade 1.1s;
 
     @include m($lg) {
       margin-bottom: 50px;
@@ -62,6 +64,54 @@
           @include m($md) {
             margin-right: 0;
           }
+        }
+
+        &:nth-child(1) {
+          animation: fade 1.15s;
+        }
+
+        &:nth-child(2) {
+          animation: fade 1.2s;
+        }
+
+        &:nth-child(3) {
+          animation: fade 1.25s;
+        }
+
+        &:nth-child(4) {
+          animation: fade 1.3s;
+        }
+
+        &:nth-child(5) {
+          animation: fade 1.35s;
+        }
+
+        &:nth-child(6) {
+          animation: fade 1.4s;
+        }
+
+        &:nth-child(7) {
+          animation: fade 1.45s;
+        }
+
+        &:nth-child(8) {
+          animation: fade 1.5s;
+        }
+
+        &:nth-child(9) {
+          animation: fade 1.55s;
+        }
+
+        &:nth-child(10) {
+          animation: fade 1.6s;
+        }
+
+        &:nth-child(11) {
+          animation: fade 1.65s;
+        }
+
+        &:nth-child(12) {
+          animation: fade 1.7s;
         }
 
         @include m($lg) {
@@ -159,6 +209,7 @@
     font-weight: 600;
     text-decoration: underline;
     color: #fff;
+    animation: fade 0.8s;
 
     &::after {
       content: "";
@@ -193,6 +244,7 @@
     width: 100%;
     min-height: 200px;
     object-fit: cover;
+    animation: fade 0.8s;
 
     @include m($xl) {
       margin-bottom: 100px;
@@ -209,6 +261,7 @@
     font-size: 36px;
     text-transform: uppercase;
     color: #fff;
+    animation: fade 0.8s;
 
     span {
       color: #ff3;
@@ -226,6 +279,7 @@
 
   .button {
     margin-left: 378px;
+    animation: fade 0.9s;
 
     @include m($xxl) {
       margin-left: 0;

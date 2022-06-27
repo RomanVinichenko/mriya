@@ -1,4 +1,6 @@
 .home {
+  margin-bottom: 2px;
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -29,6 +31,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    animation: fade 1.3s;
 
     @include m($md) {
       align-self: center;
@@ -118,25 +121,42 @@
     }
   }
 
-  span {
-    display: inline-block;
+  ul {
+    display: flex;
     margin-bottom: 15px;
-    width: fit-content;
-    font-weight: 500;
-    font-size: 24px;
-    color: #ff3;
 
-    + span {
-      margin-left: 18px;
+    li {
+      font-weight: 500;
+      font-size: 24px;
+      color: #ff3;
+
+      + li {
+        margin-left: 18px;
+      }
+
+      &:first-child {
+        animation: fade 0.85s;
+      }
+
+      &:last-child {
+        animation: fade 0.95s;
+      }
+
+      &:nth-child(2) {
+        animation: fade 0.9s;
+      }
+
+      @include m($xl) {
+        font-size: 20px;
+      }
+
+      @include m($lg) {
+        font-size: 16px;
+      }
     }
 
     @include m($xl) {
       margin-bottom: 12px;
-      font-size: 20px;
-    }
-
-    @include m($lg) {
-      font-size: 16px;
     }
   }
 
@@ -146,6 +166,7 @@
     font-size: 64px;
     line-height: 1.2;
     color: #fff;
+    animation: fade 1s;
 
     @include m(1600) {
       font-size: 48px;
@@ -177,6 +198,7 @@
       font-size: 20px;
       line-height: 1.2;
       transition: text-decoration 0.2s;
+      animation: fade 1.1s;
 
       &:hover {
         text-decoration: underline;
@@ -198,6 +220,7 @@
       width: 24px;
       height: 24px;
       transition: margin-left 0.2s;
+      animation: fade 1.15s;
 
       @include m(1370) {
         display: none;
@@ -212,11 +235,16 @@
       margin-bottom: 65px;
     }
   }
+
+  .button {
+    animation: fade 1.2s;
+  }
 }
 
 .title {
   padding-bottom: 15px;
   border-bottom: 1px solid #d9dad9;
+  animation: fade 0.8s;
 
   h2,
   span {
@@ -272,12 +300,21 @@
   &__info {
     margin: 50px 0 150px;
     padding-left: 378px;
+    animation: fade 0.85s;
 
     p:not(:last-child) {
       margin-bottom: 15px;
     }
 
     p {
+      &:first-child {
+        animation: fade 0.85s;
+      }
+
+      &:nth-child(2) {
+        animation: fade 0.9s;
+      }
+
       @include m($xl) {
         font-size: 18px;
       }
@@ -302,6 +339,8 @@
   }
 
   &__image {
+    animation: fade 0.85s;
+
     img {
       width: 100%;
       object-fit: cover;

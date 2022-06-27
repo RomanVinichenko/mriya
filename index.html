@@ -90,9 +90,11 @@
     <div class="container">
       <div class="home__wrapper">
         <div class="home__info">
-          <span>#Art</span>
-          <span>#Charity</span>
-          <span>#Cannabis</span>
+          <ul>
+            <li>#Art</li>
+            <li>#Charity</li>
+            <li>#Cannabis</li>
+          </ul>
           <h1>
             Made by Ukrainians to support Ukrainians
           </h1>
@@ -120,7 +122,7 @@
     </div>
   </section>
   <section class="about">
-    <div class="title">
+    <div class="title wow">
       <div class="container">
         <h2>About Us
           <span>01.</span>
@@ -128,7 +130,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="about__info">
+      <div class="about__info wow">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras est ipsum, euismod et integer felis in cursus
           placerat. Diam nisl, nam consequat sapien, donec. Leo elit donec orci volutpat sit. Diam ac varius consectetur
@@ -145,12 +147,12 @@
         </p>
       </div>
     </div>
-    <div class="about__image">
+    <div class="about__image wow">
       <img src="images/about.jpg" alt="About">
     </div>
   </section>
   <section class="offer">
-    <div class="title">
+    <div class="title wow">
       <div class="container">
         <h2>What we offer
           <span>03.</span>
@@ -175,7 +177,7 @@
     </div>
   </section>
   <section class="mission">
-    <div class="title">
+    <div class="title wow">
       <div class="container">
         <h2>Mission statement
           <span>02.</span>
@@ -224,7 +226,7 @@
     </div>
   </section>
   <section class="contact">
-    <div class="title">
+    <div class="title wow">
       <div class="container">
         <h2>Find us
           <span>04.</span>
@@ -254,7 +256,7 @@
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer wow">
   <div class="container">
     <nav class="menu">
       <a class="footer__logo" href="#">
@@ -319,7 +321,7 @@
   </div>
 </footer>
 
-<div class="popup popup--active">
+<div class="popup ">
   <div class="popup__wrapper">
     <p>Please, verify your age</p>
     <h2>Are you 21 years of age or older?</h2>
@@ -330,6 +332,11 @@
     <button class="popup__close"></button>
   </div>
 </div>
+
+<script src="js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
 
 <script src='js/main.js'></script>
 

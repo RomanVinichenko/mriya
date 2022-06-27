@@ -5,7 +5,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Document</title>
-  <link rel="icon" type="image/" href="" sizes="">
+<!--  <link rel="icon" type="image/" href="" sizes="">-->
   <link rel="stylesheet" href="css/style.min.css"/>
 </head>
 
@@ -96,7 +96,7 @@
           <h1>
             Made by Ukrainians to support Ukrainians
           </h1>
-          <a class="home__link" href="#">
+          <a class="home__link" href="about.html">
             <span onmouseenter="homeHoverIn()" onmouseleave="homeHoverOut()">We donate 100% of our profits to help Ukrainian refugees in the US</span>
             <img class="home__arrow" src="images/yellow-right.svg" alt="Arrow">
           </a>
@@ -318,6 +318,18 @@
     </nav>
   </div>
 </footer>
+
+<div class="popup popup--active">
+  <div class="popup__wrapper">
+    <p>Please, verify your age</p>
+    <h2>Are you 21 years of age or older?</h2>
+    <div class="popup__buttons">
+      <button class="button button__dark">Yes, enter</button>
+      <button class="button button__light">Not yet</button>
+    </div>
+    <button class="popup__close"></button>
+  </div>
+</div>
 
 <script src='js/main.js'></script>
 

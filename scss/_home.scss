@@ -225,6 +225,10 @@
     text-transform: uppercase;
     color: #fff;
 
+    @include m($xl) {
+      font-size: 32px;
+    }
+
     @include m($lg) {
       font-size: 24px;
     }
@@ -235,7 +239,7 @@
     padding-left: 378px;
 
     @include m($xl) {
-      padding-left: 72px;
+      padding-left: 62px;
     }
 
     @include m($lg) {
@@ -274,15 +278,15 @@
     }
 
     p {
-      @include m($lg) {
+      @include m($xl) {
         font-size: 18px;
       }
 
-      @include m($md) {
+      @include m($lg) {
         font-size: 16px;
       }
 
-      @include m($sm) {
+      @include m($md) {
         font-size: 14px;
       }
     }
@@ -330,7 +334,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 150px auto 0;
-    max-width: 1200px;
+    max-width: 1020px;
 
     li {
       position: relative;
@@ -342,27 +346,40 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        z-index: 10;
         width: fit-content;
         font-weight: 600;
-        font-size: 36px;
+        font-size: 32px;
         text-align: center;
         text-transform: uppercase;
         color: #fff;
         transform: translate(-50%, -50%);
 
         @include m($xl) {
-          padding: 0 40px;
-          font-size: 32px;
+          padding: 0 20px;
+          font-size: 26px;
         }
 
         @include m($md) {
-          padding: 0 30px;
-          font-size: 26px;
+          padding: 0 20px;
+          font-size: 22px;
         }
 
         @include m($sm) {
           padding: 0 5px;
           font-size: 16px;
+        }
+      }
+
+      img {
+        transition: all 0.2s;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        img {
+          filter: brightness(60%);
         }
       }
 
@@ -462,15 +479,15 @@
         margin-bottom: 15px;
       }
 
-      @include m($lg) {
+      @include m($xl) {
         font-size: 18px;
       }
 
-      @include m($md) {
+      @include m($lg) {
         font-size: 16px;
       }
 
-      @include m($sm) {
+      @include m($md) {
         font-size: 14px;
       }
     }

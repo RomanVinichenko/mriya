@@ -13,3 +13,10 @@ const menu = document.querySelector('.menu__wrapper')
 btn.addEventListener('click', function () {
   menu.classList.toggle('menu__wrapper--active')
 })
+
+const popup = document.querySelector('.popup')
+const popupClose = document.querySelector('.popup__close')
+
+popupClose.addEventListener('click', function () {
+  popup.classList.remove('popup--active')
+})

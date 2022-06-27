@@ -8,8 +8,8 @@ function homeHoverOut() {
 }
 
 const btn = document.querySelector('.menu__burger')
-const menu = document.querySelector('.menu__list')
+const menu = document.querySelector('.menu__wrapper')
 
 btn.addEventListener('click', function () {
-  menu.classList.toggle('menu__list--active')
+  menu.classList.toggle('menu__wrapper--active')
 })

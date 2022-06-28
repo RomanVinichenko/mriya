@@ -108,13 +108,13 @@
         </div>
         <div class="home__video">
           <div class="home__video-wrap">
-            <video src="images/vid1.webm" autoplay loop muted></video>
+            <video src="images/vid1.webm" autoplay loop muted playsinline></video>
           </div>
           <div class="home__video-wrap">
-            <video src="images/vid2.webm" autoplay loop muted></video>
+            <video src="images/vid2.webm" autoplay loop muted playsinline></video>
           </div>
           <div class="home__video-wrap">
-            <video src="images/vid3.webm" autoplay loop muted></video>
+            <video src="images/vid3.webm" autoplay loop muted playsinline></video>
           </div>
         </div>
       </div>
@@ -146,10 +146,10 @@
         </p>
       </div>
     </div>
-    <div class="about__image wow">
-      <img src="images/about.jpg" alt="About">
-    </div>
   </section>
+  <div class="about__image">
+    <img src="images/about.jpg" alt="About">
+  </div>
   <section class="offer">
     <div class="title wow">
       <div class="container">
@@ -194,11 +194,6 @@
               vulputate aenean enim. Habitasse vulputate at congue diam. Purus pellentesque mattis faucibus blandit
               neque. Sodales at nec ac convallis. Auctor dui consectetur sed lobortis neque sagittis.
             </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus netus id parturient arcu urna augue
-              purus, duis fermentum. Enim eget felis id at adipiscing sed erat. Est ut libero faucibus pellentesque
-              vulputate aenean enim. Habitasse vulputate at congue diam. Purus pellentesque mattis faucibus blandit
-              neque. Sodales at nec ac convallis. Auctor dui consectetur sed lobortis neque sagittis.
-            </p>
           </div>
         </li>
         <li class="wow">
@@ -208,7 +203,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus netus id parturient arcu urna augue
               purus, duis fermentum. Enim eget felis id at adipiscing sed erat. Est ut libero faucibus pellentesque
               vulputate aenean enim. Habitasse vulputate at congue diam. Purus pellentesque mattis faucibus blandit
-              neque. Sodales at nec ac convallis. Auctor dui consectetur sed lobortis neque sagittis.</p>
+              neque. Sodales at nec ac convallis. Auctor dui consectetur sed lobortis neque sagittis.
+            </p>
           </div>
         </li>
         <li class="wow">
@@ -325,9 +321,16 @@
     <p>Please, verify your age</p>
     <h2>Are you 21 years of age or older?</h2>
     <div class="popup__buttons">
-      <button class="button button__dark">Yes, enter</button>
-      <button class="button button__light">Not yet</button>
+      <button class="button popup__button">Yes, enter</button>
+      <button class="button popup__button">Not yet</button>
     </div>
+    <button class="popup__close"></button>
+  </div>
+</div>
+
+<div class="popup popup--active popup--young">
+  <div class="popup__wrapper">
+    <h2>You must be 21 years of age or older to access the information contained on this website.</h2>
     <button class="popup__close"></button>
   </div>
 </div>

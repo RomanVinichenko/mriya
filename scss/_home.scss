@@ -355,8 +355,20 @@
     }
 
     @include m($md) {
+      position: relative;
+      left: 0;
+      top: 0;
+      z-index: 1;
       max-height: 200px;
     }
+  }
+
+  @include m($xl) {
+    height: 300px;
+  }
+
+  @include m($xl) {
+    height: 200px;
   }
 }
 
